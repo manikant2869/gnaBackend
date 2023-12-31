@@ -7,7 +7,7 @@ module.exports = {
   add: async function (data) {
     try {
       let userExist = await user.findOne({
-        where: {username: data.email}
+        where: {username: data.username}
       });
       if(userExist){
         return {
