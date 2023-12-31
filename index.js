@@ -17,7 +17,9 @@ server.get("/",(req,res)=>{
   res.send("hello world");
 })
 server.use("/user",userRoute)
-
+server.get("/hello",(req,res)=>{
+  res.send("hello world");
+})
 
 
 server.listen(PORT,(error)=>{
