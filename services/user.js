@@ -6,7 +6,9 @@ const user = models.user;
 module.exports = {
   add: async function (data) {
     try {
-      let userExist = await user.findOne(data.email);
+      let userExist = await user.findOne({
+        where: {username: data.email}
+      });
       if(userExist){
         return {
           message: "You are already registered with us",
