@@ -8,7 +8,9 @@ const bodyParser = require("body-parser");
 const cors = require("cors")
  global.sequelize = sequelize
 server.use(express.json())
-server.use(cors())
+server.use(cors({
+  origin: "*"
+}))
 
 const userRoute = require("./routes/user")
 server.get("/",(req,res)=>{
