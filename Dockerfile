@@ -1,7 +1,5 @@
 # syntax=docker/dockerfile:1
-FROM node:12.18.1
-
-ENV NODE_ENV=production
+FROM node:latest
 
 WORKDIR /app
 
@@ -11,4 +9,4 @@ RUN npm install --production
 
 RUN npm install -g pm2
 
-CMD ["pm2-runtime", "server.js"]
+CMD ["pm2-runtime", "index.js"]
