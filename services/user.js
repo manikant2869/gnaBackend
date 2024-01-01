@@ -56,8 +56,18 @@ module.exports = {
       }
     } catch (err) {
       return {
-        err: err,
+        err: err
       };
     }
   },
+  list:async function(req){
+    try{
+        let result = await user.findAll();
+        return result;
+    }catch(err){
+      return {
+        err:err
+      }
+    }
+  }
 };

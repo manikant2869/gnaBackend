@@ -10,5 +10,9 @@ module.exports = {
     login: async function(req,res){
         let result = await User.login(req.body);
         utils.sendResponse(result,req,res);
+    },
+    list: async function(req,res){
+        let result = await User.list(req);
+        utils.sendResponse(result,req,res);
     }
 }
