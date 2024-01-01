@@ -18,7 +18,7 @@ server.get("/",(req,res)=>{
 })
 server.use("/user",userRoute)
 server.get("/hello",(req,res)=>{
-  res.send("hello world");
+  res.send("hello world , this is the beginnig of new year");
 })
 
 
